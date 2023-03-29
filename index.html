@@ -1,0 +1,607 @@
+
+<!DOCTYPE html>
+<html lang="en" id="pageContent">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HeckerNoHecking</title>
+  <link rel="stylesheet" type="text/css" href="css/home.css">
+  <style>
+    /* @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;400;500;600;700&display=swap');
+
+    @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Anybody:wght@300;400;500;600;700&display=swap');
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Anybody', cursive;
+      font-size: 1.05rem;
+      word-wrap: break-word;
+    }
+
+    :root {
+      --gridColor: #171a18;
+      --gridColorLighter: #282b29;
+      --gridBG: #0e1111;
+      --green1: #0e8d67;
+      --green2: #12a77a;
+    }
+
+    ::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--gridColorLighter);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--green2);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--green1);
+    }
+
+    ::selection {
+      background: var(--green2);
+      color: #f7f7e7;
+    }
+
+
+    body {
+      background-color: var(--gridBG);
+      background-image:
+        linear-gradient(var(--gridColor) 2px, transparent 2px),
+        linear-gradient(90deg, var(--gridColor) 2px, transparent 2px),
+        linear-gradient(var(--gridColor) 0.1px, transparent 2px),
+        linear-gradient(90deg, var(--gridColor) 0.1px, transparent 2px);
+      background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+      background-position: -200px -200px, -200px -200px, -100px -100px, -100px -100px;
+      color: #f7f7e7;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: auto;
+    }
+
+    .cont {
+      width: 100%;
+      max-width: 800px;
+      margin-left: 16px;
+      margin-right: 16px;
+      border: 2px solid var(--gridBG);
+      border-radius: 20px;
+      padding: 25px 10px;
+      background: var(--gridColor);
+    }
+
+    a {
+      text-decoration: none;
+      color: var(--green2);
+    }
+
+    a:hover {
+      color: var(--green1);
+    }
+
+    .sp {
+      background: var(--green2);
+      width: 150px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      padding: 2px;
+    }
+
+    .spb {
+      background-color: #f7f7e70e;
+      border-radius: 15px;
+      padding: 15px 15px;
+      height: 20px;
+      margin-bottom: 25px;
+      outline: none;
+      border: 2px solid #f7f7e71c;
+      width: 80%;
+      color: #f7f7e7;
+      letter-spacing: 1.1px;
+    }
+
+    .spb:focus {
+      border: 2px solid #f7f7e733;
+    }
+
+    .error_in_name {
+      border: 2px solid var(--green1) !important;
+      animation-name: shake;
+      animation-duration: 0.5s;
+      animation-timing-function: linear;
+    }
+
+    @keyframes shake {
+      0% {
+        transform: translateX(0);
+      }
+
+      20% {
+        transform: translateX(-10px);
+      }
+
+      40% {
+        transform: translateX(10px);
+      }
+
+      60% {
+        transform: translateX(-10px);
+      }
+
+      80% {
+        transform: translateX(10px);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background: var(--green2);
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      max-width: 400px;
+      height: 50px;
+    }
+
+    button:hover {
+      background: var(--green1);
+    }
+
+    button:disabled {
+      background-color: #9b9999;
+      cursor: not-allowed;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin: 15px 0 20px 0;
+    }
+
+    .me {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      width: 250px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      transform: translate(-50%, 0);
+    }
+
+    .me a {
+      color: #f7f7e7;
+      letter-spacing: 3px;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(18, 167, 105, 0.85);
+      transition: 0.3s;
+    }
+
+    .me a:hover {
+      opacity: 0.9;
+      letter-spacing: 3.15px;
+      border-bottom: 1px solid rgba(18, 167, 105, 0.5);
+    }
+
+    .ad {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .ad img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    @media screen and (min-width: 768px) {
+      .ad {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    ul li {
+      line-height: 1.5;
+    }
+
+    @media screen and (min-width: 600px) {
+      ul li {
+        line-height: 1.5;
+        text-align: left;
+        margin-left: 10px;
+      }
+    }
+
+    ul li::before {
+      content: "\2022";
+      color: var(--green2);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    } */
+
+
+    .modal {
+      position: fixed;
+      z-index: 999;
+      left: 50%;
+      top: 50%;
+      width: 100%;
+      max-width: 350px;
+      height: auto;
+      min-height: 100px;
+      transform: translate(-50%, -50%);
+      overflow: auto;
+      background-color: var(--gridColorLighter);
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      box-shadow: 0 0 20px 0 rgba(12, 12, 12, 0.5);
+      transition: 0.5s;
+    }
+
+    .modal h1 {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      color: #f7f7e7;
+    }
+
+    .modal p {
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      color: #f7f7e7;
+      margin-bottom: 10px;
+      line-height: 1.5;
+    }
+
+    .modal .mbf {
+      margin-bottom: 30px;
+    }
+
+    .modal a {
+      color: #f7f7e7;
+      text-decoration: none;
+      border-bottom: 1px solid var(--green2);
+      transition: 0.3s;
+    }
+
+    .modal .btn {
+      display: grid;
+      place-items: center;
+      background: var(--green2);
+      color: #f7f7e7;
+    }
+
+    .modal .btn:hover {
+      background: var(--green1);
+    }
+
+
+    .modal span {
+      border-radius: 10px;
+      width: 20px;
+      height: 20px;
+      background: var(--green2);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+
+    .modal .close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      float: right;
+      cursor: pointer;
+      background: var(--green2);
+      color: #f7f7e7;
+      border-radius: 0 10px;
+      padding: 10px;
+      transition: 0.3s;
+      outline: none;
+      border: none;
+    }
+  </style>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!--
+  <div class="ad">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'b03b678e35bc1c67862100f607644f7f',
+        'format' : 'iframe',
+        'height' : 60,
+        'width' : 468,
+        'params' : {}
+      };
+      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://consultantpatientslaughter.com/b03b678e35bc1c67862100f607644f7f/invoke.js"></scr' + 'ipt>');
+    </script>
+  </div>-->
+
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RRVQRWCR76"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-RRVQRWCR76');
+  </script>
+  
+  <script async="async" data-cfasync="false" src="//consultantpatientslaughter.com/4d29547ce8e6aa8a13e53751b46750e4/invoke.js"></script>
+<div id="container-4d29547ce8e6aa8a13e53751b46750e4"></div>
+</head>
+
+<body>
+
+
+  <div class="me">
+    <a target="blank" href="https://replit.com/@HeckerNoHecking">
+      @HeckerNoHecking
+    </a>
+  </div>
+
+  <div class="cont" style="text-align: center;">
+    <section class="center">
+      <p class="title">HECK SKILLSHARE?</p>
+    </section>
+
+    <section class="center">
+      <div>
+        <ul type="none">
+          <li>Head over to <a target="blank" href="https://skillshare.com/classes/">https://skillshare.com/classes/</a>
+          </li>
+          <li>Select a course, copy the course link</li>
+          <li>Paste the link below and heck it!</li>
+        </ul>
+        <p style="opacity: 0.3; font-size: 95%;margin-top: 10px;">
+          (Takes a while to heck)
+        </p><br>
+      </div>
+    </section>
+
+    <div class="">
+      <form id="heck-form">
+        <label for="url"></label>
+        <input name="url" id="url" class="spb" type="text" placeholder="https://skillshare.com/classes/...."
+          onblur="checkInput()" oninput="checkInput()"><br>
+        <!--<div class="ad">
+          <script type="text/javascript">
+            atOptions = {
+              'key' : 'b03b678e35bc1c67862100f607644f7f',
+              'format' : 'iframe',
+              'height' : 60,
+              'width' : 468,
+              'params' : {}
+            };
+            document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://consultantpatientslaughter.com/b03b678e35bc1c67862100f607644f7f/invoke.js"></scr' + 'ipt>');
+          </script>
+        </div> -->
+        <button id="heck-btn" class="buttonload heckbtn" type="submit">
+          HECKING <i class='fa-light fa-circle-notch fa-spin'></i>)
+        </button>
+      
+        <script>
+          function openModal() {
+            document.querySelector('.modal').style.display = 'block';
+          }
+
+          function closeModal() {
+            document.querySelector('.modal').style.display = 'none';
+          }
+        </script>
+      </form>
+    </div>
+  </div>
+
+
+<!--  <div class="ad">
+    <script type="text/javascript">
+      atOptions = {
+        'key' : 'b03b678e35bc1c67862100f607644f7f',
+        'format' : 'iframe',
+        'height' : 60,
+        'width' : 468,
+        'params' : {}
+      };
+      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://consultantpatientslaughter.com/b03b678e35bc1c67862100f607644f7f/invoke.js"></scr' + 'ipt>');
+    </script>
+  </div> -->
+
+  <script type='text/javascript' src='//consultantpatientslaughter.com/14/4a/8a/144a8a20af9614931395e128dc6c92aa.js'>
+  </script>
+
+  <script>
+    const form = document.getElementById('heck-form');
+    const button = document.getElementById('heck-btn');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      if (!checkInput()) {
+        return;
+      }
+
+      const urlInput = document.getElementById('url');
+      const url = urlInput.value;
+
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', 'heck.php');
+      xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          let response = xhr.responseText;
+          if (response.includes("Error")) {
+            alert('Error! Please check your URL.');
+          } else {
+            document.getElementById("heck-btn").innerHTML = "HECKED <i class='fa fa-check'></i>";
+            doYourThing(response);
+          }
+          setTimeout(function () {
+            document.getElementById("heck-btn").innerHTML = "HECK";
+            document.getElementById("heck-btn").disabled = false;
+          }, 1000);
+        } else {
+          alert('Error: ' + xhr.statusText);
+        }
+      };
+      xhr.send('url=' + encodeURIComponent(url));
+
+      // document.getElementById("heck-btn").disabled = true;
+      document.getElementById("heck-btn").innerHTML = "HECKING <i class='fa-light fa-circle-notch fa-spin'></i>";
+    });
+
+    function checkInput() {
+      var input = document.getElementById("url").value.toLowerCase();
+      var pattern = /^(https?:\/\/)?(www\.)?skillshare\.com\//;
+      if (!pattern.test(input)) {
+        document.getElementById("url").classList.add("error_in_name");
+        // document.getElementById("heck-btn").disabled = true;
+        return false;
+      } else {
+        document.getElementById("url").classList.remove("error_in_name");
+        // document.getElementById("heck-btn").disabled = false;
+        return true;
+      }
+    }
+
+    function doYourThing(data) {
+      data = JSON.parse(data);
+
+
+      let title = data[0];
+      let thumb = data[1];
+      let noOfVid = parseInt(data[2]);
+      let totalDuration = data[3];
+      let vidNames = data[4];
+      let vidLinks = data[5];
+      let vidSubtitles = data[6];
+
+      let json = {
+        "title": title,
+        "thumb": thumb,
+        "noOfVid": noOfVid,
+        "totalDuration": totalDuration,
+        "videos": []
+      };
+
+      for (let i = 0; i < noOfVid; i++) {
+        json.videos.push({
+          "name": vidNames[i],
+          "link": vidLinks[i],
+          "subtitle": vidSubtitles[i]
+        });
+      }
+
+      localStorage.setItem("heckData", JSON.stringify(json));
+      localStorage.removeItem("lastPlayed");
+
+      window.location.href = "./hecked/";
+    }
+
+    function isValidHttpUrl(string) {
+      let url;
+      try {
+        url = new URL(string);
+      } catch (_) {
+        return false;
+      }
+      return url.protocol === "http:" || url.protocol === "https:";
+    }
+
+    // document.getElementById("adBoxd") on change
+    // document.getElementById("adBoxd").addEventListener("change", function () {
+      
+    // });
+
+    // click counter on whole page
+    let clicks = 0;
+    document.addEventListener("click", function () {
+      clicks++;
+    });
+
+    function adOK() {
+      let adBoxd = document.getElementById("adBoxd");
+      if (isValidHttpUrl(adBoxd.value) && clicks > 3) {
+        let x = adBoxd.value;
+        if (x.includes("utm") || x.includes("id=")) {
+          document.getElementById("heck-btn").disabled = false;
+          document.getElementById("heck-btn").innerHTML = "HECK (UNLOCKED <i class='fa-regular fa-unlock'></i>)";
+        }
+        
+      }
+    }
+  </script>
+<script>
+  document.addEventListener('contextmenu', (e) => e.preventDefault());
+  DisableDevtool({
+    ondevtoolopen: function () {
+      document.body.innerHTML = "";
+      document.body.style.backgroundColor = "#0e1111";
+      document.body.style.color = "#fff";
+      document.body.style.textAlign = "center";
+      document.body.innerHTML = "<h1 style='font-size: 150%'>Dev tools is not allowed!</h1>";
+      document.body.innerHTML += "<p style='font-size: 150%'>Reload the page after closing dev tools</p>";
+
+      const buttons = document.getElementsByTagName("button");
+      for (let i = 0; i < buttons.length; i++) {
+        buttons[i].disabled = true;
+      }
+
+      const inputs = document.getElementsByTagName("input");
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].disabled = true;
+      }
+    },
+    disableSelect: true,
+  })
+</script>
+</body>
+
+</html>
